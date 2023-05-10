@@ -18,7 +18,7 @@ class Home_model extends CI_Model
     {
         $this->db->from('kasmasuk');
         $this->db->select('SUM(jumlah) as totalnya');
-        $this->db->where('YEAR(kasmasuk.created_date) =', date('Y'));
+        // $this->db->where('YEAR(kasmasuk.created_date) =', date('Y'));
         $query = $this->db->get();
         $hmm = $query->row();
         if ($hmm) {
@@ -35,7 +35,7 @@ class Home_model extends CI_Model
     {
         $this->db->from('kaskeluar');
         $this->db->select('SUM(jumlah) as totalnya');
-        $this->db->where('YEAR(kaskeluar.created_date) =', date('Y'));
+        // $this->db->where('YEAR(kaskeluar.created_date) =', date('Y'));
         $query = $this->db->get();
         $hmm = $query->row();
         if ($hmm) {
